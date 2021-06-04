@@ -25,8 +25,8 @@ main.py
 Request:
 ```json
 {
-  "loan_id": string,
-  "name": string
+  "loan_id": "string",
+  "name": "string"
 }
 ```
 Response:
@@ -38,7 +38,7 @@ Response:
 Response:
 ```json
 {
-  "loan_id": string,
-  "name": string
+  "loan_id": "string",
+  "name": "string"
 }
 ```
