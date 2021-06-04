@@ -19,6 +19,8 @@ python setup.py install
 main.py
 ```
 
+The server is running on `localhost:8080`
+
 
 ## API reference
 **POST /loans/**\
