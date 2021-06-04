@@ -3,7 +3,7 @@ import json
 from bottle import get, run, post, request, Response
 from pony.orm import db_session
 
-from models import db, Product
+from loans_api.models import db, Product
 
 
 @db_session
@@ -39,8 +39,12 @@ def loan_detail_view(loan_id):
     return Response(body=json_data)
 
 
-if __name__ == '__main__':
-    db.bind(provider='sqlite', filename='database.sqlite', create_db=True)
+def run_server():
+    db.bind(provider='sqlite', filename=':memory:')
     db.generate_mapping(create_tables=True)
 
     run(host='localhost', port=8080)
+
+
+if __name__ == '__main__':
+    run_server()
