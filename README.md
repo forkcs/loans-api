@@ -18,3 +18,27 @@ python setup.py install
 ```shell
 main.py
 ```
+
+
+## API reference
+**POST /loans/**\
+Request:
+```json
+{
+  "loan_id": string,
+  "name": string
+}
+```
+Response:
+```json
+201 CREATED
+```
+
+**GET /loans/{id}/**\
+Response:
+```json
+{
+  "loan_id": string,
+  "name": string
+}
+```
